@@ -80,7 +80,7 @@ var BlogComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-blog',
             template: "\n    <h2>Posts</h2>\n\n    <mat-list>\n      <mat-list-item *ngFor=\"let post of posts$ | async\">\n        <h2 mat-line>\n          <a [routerLink]=\"['/blog/posts', post.id]\">{{post.title}}</a>\n        </h2>\n\n        <p mat-line> {{post.dateCreated | date}} </p>\n      </mat-list-item>\n    </mat-list>\n  ",
-            styles: ["\n    :host {\n      width: 80%;\n    }\n\n    a {\n      font-size: 36px;\n      color: black;\n    }\n\n    :host /deep/ .mat-list-item { \n      font-size: 24px;\n    }\n    "]
+            styles: ["\n    :host {\n      width: 80%;\n    }\n\n    a {\n      font-size: 36px;\n      color: black;\n      white-space: initial;\n    }\n\n    :host /deep/ .mat-list-item { \n      font-size: 24px;\n    }\n    "]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_core_services__WEBPACK_IMPORTED_MODULE_2__["PostService"]])
     ], BlogComponent);
