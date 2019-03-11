@@ -141,65 +141,6 @@ var PostComponent = /** @class */ (function () {
 
 
 
-/***/ }),
-
-/***/ "./src/app/core/services/index.ts":
-/*!****************************************!*\
-  !*** ./src/app/core/services/index.ts ***!
-  \****************************************/
-/*! exports provided: PostService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _post_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./post.service */ "./src/app/core/services/post.service.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PostService", function() { return _post_service__WEBPACK_IMPORTED_MODULE_0__["PostService"]; });
-
-
-
-
-/***/ }),
-
-/***/ "./src/app/core/services/post.service.ts":
-/*!***********************************************!*\
-  !*** ./src/app/core/services/post.service.ts ***!
-  \***********************************************/
-/*! exports provided: PostService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostService", function() { return PostService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-
-
-
-
-var PostService = /** @class */ (function () {
-    function PostService(http) {
-        this.http = http;
-    }
-    PostService.prototype.getPost = function (postId) {
-        return this.http.get("/content/posts/" + postId + ".md", { responseType: 'text' });
-    };
-    PostService.prototype.getPosts = function () {
-        return this.http.get("/content/posts.json")
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (data) { return data.posts; }));
-    };
-    PostService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
-    ], PostService);
-    return PostService;
-}());
-
-
-
 /***/ })
 
 }]);
